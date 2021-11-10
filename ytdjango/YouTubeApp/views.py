@@ -4,6 +4,7 @@ from .serializers import CommentSerializer
 from rest_framework.views import APIView
 from rest_framework.views import Response 
 from rest_framework import status
+from rest_framework.views import APIView
 
 class CommentList(APIView):
 
@@ -18,4 +19,10 @@ class CommentList(APIView):
             serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class LikeComment(APIView):
+    def get_id(self, pk):
+        try:
+            return Comment.objects.get(pk=pk)
+            except Comment
 
