@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'YouTubeApp',
-    'corsheaders'
+    'corsheaders',
+    'RepliesApp'
 ]
 
 MIDDLEWARE = [
