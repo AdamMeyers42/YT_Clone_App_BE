@@ -20,9 +20,9 @@ class CommentList(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-class LikeComment(APIView):
-    def get_id(self, pk):
-        try:
-            return Comment.objects.get(pk=pk)
-            except Comment
+# class LikeComment(APIView):
+#     def get_id(self, pk):
+#         try:
+#             return Comment.objects.get(pk=pk)
+#             except 
 
