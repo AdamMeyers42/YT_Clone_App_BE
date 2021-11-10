@@ -1,4 +1,4 @@
-from rest_framework import serialiers 
+from rest_framework import serializers 
 from .models import Comment
 
 
