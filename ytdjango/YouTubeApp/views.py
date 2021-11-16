@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from rest_framework.serializers import Serializer
 from .models import Comment
 from .serializers import CommentSerializer
 from rest_framework.views import APIView
@@ -13,6 +14,7 @@ class CommentList(APIView):
         comment = Comment.objects.all()
         serializer = CommentSerializer (comment, many=True)
         return Response(serializer.data)
+    
     
     def post(self, request):
         serializer = CommentSerializer(data=request.data)
